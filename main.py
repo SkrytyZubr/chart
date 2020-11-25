@@ -7,8 +7,7 @@ dfs = pd.read_html(url)
 
 # data from csv
 
-y = df["Nazwisko"]
-x = df["Liczba głosów"]
+y, x = df["Nazwisko"], df["Liczba głosów"]
 
 # data from url
 
@@ -16,8 +15,7 @@ df2 = df[["Wiek"]]
 
 # convert dateframe to list
 
-y1 = y.tolist()
-x1 = x.tolist()
+y1, x1 = y.tolist(), x.tolist()
 
 # combination of y1 and x1 in dict
 
@@ -86,10 +84,3 @@ ax5.hist(df2, bins = 10, range = (35, int(df2.max())), facecolor = "blue", edgec
 ax5.set_title("5. Wykres wieku kandydatów")
 
 plt.show()
-
-
-
-
-
-
-
